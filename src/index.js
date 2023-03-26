@@ -22,7 +22,7 @@ try {
     const isBinary = extension === 'rbxl';
 
     console.log(`Uploading place file ${placeFile}`);
-    const response = await axios.post(
+    axios.post(
         'http://POST',
         fs.readFileSync(placeFile, 'utf-8'),
         {
@@ -31,12 +31,12 @@ try {
             'Content-Type': isBinary ? 'application/octet-stream' : 'application/xml',
             }
         }
-    );
-
-    const data = response.data;
-    const versionNumber = data.versionNumber;
-    console.log($`Saved place file as version ${versionNumber}`);
-    core.setOutput('version-number', versionNumber);
+    ).then((response) => {
+        const data = response.data;
+        const versionNumber = data.versionNumber;
+        console.log($`Saved place file as version ${versionNumber}`);
+        core.setOutput('version-number', versionNumber);
+    });
 } catch (error) {
     core.setFailed(error.message);
 }
