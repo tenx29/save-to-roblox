@@ -5,7 +5,7 @@ inputs:
   api-key:
     description: 'The API key to use'
     required: true
-  universeId:
+  universe-id:
     description: 'The universe ID to save to'
     required: true
   place-id:
