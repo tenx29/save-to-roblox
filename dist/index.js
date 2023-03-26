@@ -16304,7 +16304,7 @@ try {
 
     console.log(`Uploading place file ${placeFile}`);
     axios.post(
-        'http://POST',
+        `https://apis.roblox.com/universes/v1/${universeId}/places/${placeId}/versions?versionType=${versionType}`,
         fs.readFileSync(placeFile, 'utf-8'),
         {
             headers: {
