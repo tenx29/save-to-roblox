@@ -2,16 +2,16 @@ name: SaveToRoblox
 author: 'tenx29'
 description: 'Saves a place file to Roblox'
 inputs:
-  apiKey:
+  api-key:
     description: 'The API key to use'
     required: true
   universeId:
     description: 'The universe ID to save to'
     required: true
-  placeId:
+  place-id:
     description: 'The place ID to save to'
     required: true
-  versionType:
+  version-type:
     type: choice
     description: 'The version type to save as'
     required: true
@@ -19,7 +19,7 @@ inputs:
     options:
     - Saved
     - Published
-  placeFile:
+  place-file:
     description: 'The .rbxlx place file to save'
     required: true
 outputs:
