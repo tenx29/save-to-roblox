@@ -1,0 +1,27 @@
+name: SaveToRoblox
+author: 'tenx29'
+description: 'Saves a place file to Roblox'
+inputs:
+  universeId:
+    description: 'The universe ID to save to'
+    required: true
+  placeId:
+    description: 'The place ID to save to'
+    required: true
+  versionType:
+    type: choice
+    description: 'The version type to save as'
+    required: true
+    default: Saved
+    options:
+    - Saved
+    - Published
+  placeFile:
+    description: 'The .rbxlx place file to save'
+    required: true
+outputs:
+  versionNumber:
+    description: 'The version number of the saved place'
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
