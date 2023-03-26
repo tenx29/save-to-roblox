@@ -2,6 +2,9 @@ name: SaveToRoblox
 author: 'tenx29'
 description: 'Saves a place file to Roblox'
 inputs:
+  apiKey:
+    description: 'The API key to use'
+    required: true
   universeId:
     description: 'The universe ID to save to'
     required: true
