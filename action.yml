@@ -1,6 +1,9 @@
 name: SaveToRoblox
 author: 'tenx29'
 description: 'Saves a place file to Roblox'
+branding:
+  icon: 'upload'
+  color: 'blue'
 inputs:
   api-key:
     description: 'The API key to use'
