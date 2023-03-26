@@ -34,7 +34,7 @@ try {
     ).then((response) => {
         const data = response.data;
         const versionNumber = data.versionNumber;
-        console.log($`Saved place file as version ${versionNumber}`);
+        console.log(`Saved place file as version ${versionNumber}`);
         core.setOutput('version-number', versionNumber);
     });
 } catch (error) {
