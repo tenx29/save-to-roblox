@@ -24,7 +24,7 @@ try {
     console.log(`Uploading place file ${placeFile}`);
     axios.post(
         `https://apis.roblox.com/universes/v1/${universeId}/places/${placeId}/versions?versionType=${versionType}`,
-        fs.readFileSync(placeFile, 'utf-8'),
+        fs.readFileSync(placeFile),
         {
             headers: {
             'x-api-key': apiKey,
